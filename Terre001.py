@@ -1,3 +1,4 @@
+# alphabet
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 for lettre in alphabet:
