@@ -1,1 +1,1 @@
-# CodingAccelerator_trials
+# CodingAccelerator_trials_earth
