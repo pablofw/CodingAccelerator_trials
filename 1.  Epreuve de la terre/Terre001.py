@@ -9,7 +9,7 @@ print()
 print()
 '''
 # V2
-# Utilities 
+# --------------- Utilities --------------- #
 def generate_alphabet():
     first_ascii = ord("a")
     last_ascii = ord("z")
@@ -18,17 +18,17 @@ def generate_alphabet():
         alphabet += chr(ascii_code)
     return alphabet
 
-# Error handling 
+# --------------- Error handling --------------- #
 def is_valid_alphabet(alphabet):
     reference_alphabet_FR = "abcdefghijklmnopqrstuvwxyz"
     return alphabet == reference_alphabet_FR
 
-# Parsing & Data Retrieval 
+# --------------- Parsing & Data Retrieval  --------------- #
 def get_alphabet():
     alphabet = generate_alphabet()
     return alphabet if is_valid_alphabet(alphabet) else None 
 
-# Resolution
+# --------------- Resolution --------------- #
 def display_alphabet():
     result = get_alphabet()
     if result:
@@ -36,5 +36,5 @@ def display_alphabet():
     else:
         print("Error")
 
-# Result Display
+# --------------- Result Display / Execution --------------- #
 display_alphabet()

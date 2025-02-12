@@ -20,9 +20,13 @@ def find_arguments():
     arguments = get_arguments()
     return arguments if is_valid_arguments(arguments) else None
 
-# Resolution X 
+# Resolution : X 
 
 # Result Display
+def display_result():
+    arguments = find_arguments()
+    if arguments:
+        
 
 # Entry point
 if __name__ == "__main__":
