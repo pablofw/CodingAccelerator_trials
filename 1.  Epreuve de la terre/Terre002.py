@@ -6,23 +6,29 @@ print(__file__.split('/')[-1].split('\\')[-1])
 import sys
 def get_filename():
     full_path = sys.argv[0]
-    filename = full_path.split("/")[-1]
+    filename = ""
+    
+    for char in full_path:
+        if char in ("/", "\\"):
+            filename = ""
+        else:
+            filename += char
+            
     return filename
-
+    
 # --------------- Error handling --------------- #
 def is_valid_filename(filename):
-    return isinstance(filename, str) and len(filename) > 0
+    return isinstance(filename, str) and "." in filename and len(filename) > 0
 
 # --------------- Parsing & Data Retrieval--------------- #
-'''no needed'''
 # --------------- Resolution --------------- #
-def find_filename(): 
+def retrieve_filename(): 
     filename = get_filename()
     return filename if is_valid_filename(filename) else None
 
 # --------------- Result Display --------------- #
 def display_filename():
-    result = find_filename()
+    result = retrieve_filename()
     if result:
         print(result)
     else:
