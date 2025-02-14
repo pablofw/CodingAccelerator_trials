@@ -12,11 +12,7 @@ def generate_alphabet():
 # --------------- Parsing & Data Retrieval  --------------- #
 # --------------- Resolution --------------- #
 def display_alphabet():
-    result = generate_alphabet()
-    if result == "abcdefghijklmnopqrstuvwxyz":
-        print(result)
-    else:
-        print("Error")
+    print(generate_alphabet())
 
 # --------------- Result Display / Execution --------------- #
 display_alphabet()
