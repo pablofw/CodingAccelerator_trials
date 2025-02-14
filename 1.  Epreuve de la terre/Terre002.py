@@ -1,7 +1,4 @@
 # Nom du prog
-'''
-print(__file__.split('/')[-1].split('\\')[-1])
-'''
 # --------------- Utilities --------------- #
 import sys
 def get_filename():
@@ -17,21 +14,23 @@ def get_filename():
     return filename
     
 # --------------- Error handling --------------- #
-def is_valid_filename(filename):
-    return isinstance(filename, str) and "." in filename and len(filename) > 0
+def is_valid_filename(filename: str) -> bool:
+    return bool(filename and "." in filename and not filename.startswith("."))
 
 # --------------- Parsing & Data Retrieval--------------- #
 # --------------- Resolution --------------- #
 def retrieve_filename(): 
     filename = get_filename()
-    return filename if is_valid_filename(filename) else None
+
+    if not is_valid_filename(filename):
+        print("Error")
+        sys.exit(1)
+    
+    return filename
 
 # --------------- Result Display --------------- #
 def display_filename():
-    result = retrieve_filename()
-    if result:
-        print(result)
-    else:
-        print("Error")
+    filename = retrieve_filename()
+    print(filename)
 
 display_filename()
