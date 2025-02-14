@@ -1,14 +1,14 @@
 # Afficheur d'arguments
 # --------------- Utilities --------------- #
-
+def get_input_arguments():
+    import sys
+    return sys.argv[1:]
+    
 # --------------- Error handling --------------- #
 def has_input_arguments(arguments):
     return len(arguments) > 0 
 
 # --------------- Parsing & Data Retrieval --------------- #
-def get_input_arguments():
-    import sys
-    return sys.argv[1:]
 
 # --------------- Resolution --------------- #
 def get_validated_input_arguments():
