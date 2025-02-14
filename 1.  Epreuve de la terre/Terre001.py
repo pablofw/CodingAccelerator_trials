@@ -20,10 +20,6 @@ def generate_alphabet():
 
 # --------------- Error handling --------------- #
 # --------------- Parsing & Data Retrieval  --------------- #
-'''
-no needed, cause no entry in the utilies function
-'''
-
 # --------------- Resolution --------------- #
 def display_alphabet():
     result = generate_alphabet()
