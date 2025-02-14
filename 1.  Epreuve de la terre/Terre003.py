@@ -18,7 +18,7 @@ def get_validated_input_arguments():
         sys.exit(1)
     else: return arguments
 
-# --------------- Result Display --------------- #
+# --------------- Result Display / Execution --------------- #
 def display_inputs_arguments():
     arguments = get_validated_input_arguments()
     for argument in arguments:
