@@ -4,7 +4,7 @@ import sys
     
 # --------------- Error handling --------------- #
 def is_valid_filename(filename: str) -> bool:
-    return bool(filename and "." in filename and not filename.startswith("."))
+    return bool(filename) and filename.count(".") >= 1 and not filename.startswith(".")
 
 # --------------- Parsing & Data Retrieval--------------- #
 def get_filename():
@@ -20,7 +20,7 @@ def get_filename():
     return filename
     
 # --------------- Resolution --------------- #
-def display_filename(): 
+def retrieve_filename(): 
     filename = get_filename()   
     return filename if is_valid_filename(filename) else None
 
