@@ -20,13 +20,13 @@ def get_filename():
     return filename
     
 # --------------- Resolution --------------- #
-def retrieve_validate_filename(): 
+def retrieve_validated_filename(): 
     filename = get_filename()   
     return filename if is_valid_filename(filename) else None
 
 # --------------- Result Display / Execution --------------- #
 def display_filename(): 
-    filename = retrieve_validate_filename()
+    filename = retrieve_validated_filename()
     if filename:
         print(filename)
     else: 
