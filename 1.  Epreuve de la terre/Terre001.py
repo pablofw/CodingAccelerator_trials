@@ -1,14 +1,4 @@
 # alphabet
-'''
-# V1 
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-
-for lettre in alphabet:
-    print(lettre, end='')
-print()  
-print()
-'''
-# V2
 # --------------- Utilities --------------- #
 def generate_alphabet():
     ascii_a = ord("a")
