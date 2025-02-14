@@ -21,15 +21,16 @@ def get_filename():
     
 # --------------- Resolution --------------- #
 def display_filename(): 
-    filename = get_filename()
+    filename = get_filename()   
+    return filename if is_valid_filename(filename) else None
 
-    if is_valid_filename(filename):
+# --------------- Result Display / Execution --------------- #
+def display_filename(): 
+    filename = retrieve_filename()
+    if filename:
         print(filename)
     else: 
         print("Error")
         sys.exit(1)
-        
-    return filename
 
-# --------------- Result Display / Execution --------------- #
 display_filename()
