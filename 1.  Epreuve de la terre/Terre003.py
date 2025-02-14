@@ -1,6 +1,5 @@
 # Afficheur d'arguments
 # --------------- Utilities --------------- #
-import sys
 
 # --------------- Error handling --------------- #
 def has_input_arguments(arguments):
@@ -8,15 +7,17 @@ def has_input_arguments(arguments):
 
 # --------------- Parsing & Data Retrieval --------------- #
 def get_input_arguments():
+    import sys
     return sys.argv[1:]
 
 # --------------- Resolution --------------- #
 def get_validated_input_arguments():
+    import sys
     sys_arguments = get_input_arguments()
-    if has_input_arguments(sys_arguments) == False:
+    if not has_input_arguments(sys_arguments):
         print("Error: No arguments provided.")
         sys.exit(1)
-    else: return arguments
+    else: return sys_arguments
 
 # --------------- Result Display / Execution --------------- #
 def display_inputs_arguments():
