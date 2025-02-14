@@ -1,13 +1,7 @@
 # Nom du prog
 # --------------- Utilities --------------- #
-import sys
-    
-# --------------- Error handling --------------- #
-def is_valid_filename(filename: str) -> bool:
-    return bool(filename) and filename.count(".") >= 1 and not filename.startswith(".")
-
-# --------------- Parsing & Data Retrieval--------------- #
 def get_filename():
+    import sys
     full_path = sys.argv[0]
     filename = ""
     
@@ -18,6 +12,12 @@ def get_filename():
             filename += char
             
     return filename
+    
+# --------------- Error handling --------------- #
+def is_valid_filename(filename: str) -> bool:
+    return bool(filename) and filename.count(".") >= 1 and not filename.startswith(".")
+
+# --------------- Parsing & Data Retrieval--------------- #
     
 # --------------- Resolution --------------- #
 def retrieve_validated_filename(): 
