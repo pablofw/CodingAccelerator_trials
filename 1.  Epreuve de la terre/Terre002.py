@@ -1,6 +1,12 @@
 # Nom du prog
 # --------------- Utilities --------------- #
 import sys
+    
+# --------------- Error handling --------------- #
+def is_valid_filename(filename: str) -> bool:
+    return bool(filename and "." in filename and not filename.startswith("."))
+
+# --------------- Parsing & Data Retrieval--------------- #
 def get_filename():
     full_path = sys.argv[0]
     filename = ""
@@ -13,24 +19,17 @@ def get_filename():
             
     return filename
     
-# --------------- Error handling --------------- #
-def is_valid_filename(filename: str) -> bool:
-    return bool(filename and "." in filename and not filename.startswith("."))
-
-# --------------- Parsing & Data Retrieval--------------- #
 # --------------- Resolution --------------- #
-def retrieve_filename(): 
+def display_filename(): 
     filename = get_filename()
 
-    if not is_valid_filename(filename):
+    if is_valid_filename(filename):
+        print(filename)
+    else: 
         print("Error")
         sys.exit(1)
-    
+        
     return filename
 
-# --------------- Result Display --------------- #
-def display_filename():
-    filename = retrieve_filename()
-    print(filename)
-
+# --------------- Result Display / Execution --------------- #
 display_filename()
