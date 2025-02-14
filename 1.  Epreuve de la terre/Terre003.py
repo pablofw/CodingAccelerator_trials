@@ -1,33 +1,27 @@
 # Afficheur d'arguments
-'''
+# --------------- Utilities --------------- #
 import sys
 
-for argument in sys.argv[1:]: # On prend tout les arguments sauf le 1 (le nom du fichier)
-    print(argument)
-'''
-# Utilities 
-import sys
-
-def get_arguments():
-    return sys.argv[1:]
-
-# Error handling 
-def is_valid_arguments(arguments):
+# --------------- Error handling --------------- #
+def has_input_arguments(arguments):
     return len(arguments) > 0 
 
-# Parsing & Data Retrieval
-def find_arguments():
-    arguments = get_arguments()
-    return arguments if is_valid_arguments(arguments) else None
+# --------------- Parsing & Data Retrieval --------------- #
+def get_input_arguments():
+    return sys.argv[1:]
 
-# Resolution : X 
+# --------------- Resolution --------------- #
+def retrieve_input_sys_arguments():
+    sys_arguments = get_input_arguments()
+    if has_input_arguments(sys_arguments) == False:
+        print("Error: No arguments provided.")
+        sys.exit(1)
+    else: return arguments
 
-# Result Display
+# --------------- Result Display --------------- #
 def display_result():
-    arguments = find_arguments()
-    if arguments:
-        
+    arguments = retrieve_input_sys_arguments()
+    for argument in arguments:
+        print(argument)
 
-# Entry point
-if __name__ == "__main__":
-    display_result()
+display_result()
