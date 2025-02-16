@@ -1,4 +1,4 @@
-# Nom du prog
+# Program name
 # --------------- Utilities --------------- #
 def get_filename():
     import sys
@@ -26,6 +26,7 @@ def retrieve_validated_filename():
 
 # --------------- Result Display / Execution --------------- #
 def display_filename(): 
+    import sys
     filename = retrieve_validated_filename()
     if filename:
         print(filename)

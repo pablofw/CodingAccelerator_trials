@@ -4,7 +4,7 @@ def generate_alphabet():
     ascii_a = ord("a")
     ascii_z = ord("z")
     alphabet = ""
-    for ascii_code in range(first_ascii, last_ascii + 1):
+    for ascii_code in range(ascii_a, ascii_z + 1):
         alphabet += chr(ascii_code)
     return alphabet
 

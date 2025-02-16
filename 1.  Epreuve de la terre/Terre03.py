@@ -1,4 +1,4 @@
-# Afficheur d'arguments
+# Arguments display
 # --------------- Utilities --------------- #
 def get_input_arguments():
     import sys
