@@ -33,3 +33,13 @@ if len(sys.argv) != 2:
     print("Utilisation : python3 monexo.py HH:MMAM/PM")
 else:
     convert_to_24h(sys.argv[1])
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #

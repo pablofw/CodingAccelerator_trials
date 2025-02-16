@@ -20,3 +20,13 @@ def nb_caracteres(chaine):
     return nb
 
 print(nb_caracteres(argument))
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #

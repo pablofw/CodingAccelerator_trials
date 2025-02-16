@@ -21,3 +21,13 @@ else:
         print(a)
     else:
         print(c)
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #

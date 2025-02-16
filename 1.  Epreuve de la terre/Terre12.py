@@ -32,3 +32,13 @@ if len(sys.argv) != 2:
     print("Erreur : Veuillez fournir une heure au format 24h.")
 else:
     convert_to_12h(sys.argv[1])
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #

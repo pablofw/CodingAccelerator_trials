@@ -27,3 +27,13 @@ def racine_carree(n):
 racine, reste = racine_carree(nombre_input)
 
 print(f"Racine entière : {racine}, Reste : {reste}")
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #

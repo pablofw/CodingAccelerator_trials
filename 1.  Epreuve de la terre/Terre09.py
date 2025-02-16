@@ -25,3 +25,13 @@ def cestlapuissancecestlapuissance(base, exposant):
 
 # Affichage du résultat
 print(cestlapuissancecestlapuissance(base, exposant))
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #

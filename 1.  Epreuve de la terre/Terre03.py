@@ -17,7 +17,8 @@ def get_validated_input_arguments():
     if not has_input_arguments(sys_arguments):
         print("Error: No arguments provided.")
         sys.exit(1)
-    else: return sys_arguments
+    else: 
+        return sys_arguments
 
 # --------------- Result Display / Execution --------------- #
 def display_inputs_arguments():

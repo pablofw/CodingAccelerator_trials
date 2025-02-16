@@ -17,3 +17,13 @@ chaine_input = sys.argv[1]
 chaine_output = inverser_chaine(chaine_input)
 
 print(chaine_output)
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #

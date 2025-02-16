@@ -23,3 +23,14 @@ if est_triee(nombres):
     print("Triée !")
 else:
     print("Pas triée !")
+
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #

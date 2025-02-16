@@ -1,76 +1,50 @@
-# Divisions
-
-import sys
-
-# Check qu'on a bien juste 2 arguments
-if len(sys.argv) != 3:
-    print("erreur.")
-    sys.exit(1)
-
-try:
-    # Récup des deux nb, et check si cest bien des nb
-    num1 = int(sys.argv[1])
-    num2 = int(sys.argv[2])
-    # Check division interdite
-    if num2 == 0:
-        print("Division par 0 interdite, retourne en 6ème chef")
-    else:
-        # Calcul et affichage du résultat et du reste
-        print(f"résultat: {num1 // num2}")
-        print(f"reste: {num1 % num2}")
-
-except ValueError:
-    print("erreur.")  # Gère le cas où les arguments ne sont pas des nombres
-
-
-
-
-
+# Division
 # --------------- Utilities --------------- #
 import sys
 
-def is_integer(value: str) -> bool:
-    """Check if a string is a valid integer."""
-    return value.lstrip('-').isdigit()
+# --------------- Error Handling --------------- #
+def is_valid_division_arguments(list_sys_arguments) -> bool:
 
-# --------------- Error handling --------------- #
-def validate_inputs(arguments: list[str]) -> tuple[int, int] | str:
-    """Validate and parse inputs, returning integers if valid, else an error message."""
-    if len(arguments) != 2:
-        return "erreur."
-    
-    dividend, divisor = arguments
+    if len(list_sys_arguments) != 2:
+        return False
 
-    if not is_integer(dividend) or not is_integer(divisor):
-        return "erreur."
+    numerator, denominator = list_sys_arguments
 
-    dividend, divisor = int(dividend), int(divisor)
+    if not numerator.lstrip("-").isdigit() or not denominator.lstrip("-").isdigit():
+        return False
 
-    if divisor == 0 or dividend < divisor:
-        return "erreur."
+    if int(denominator) == 0:
+        return False
 
-    return dividend, divisor
+    return True
+
+# --------------- Parsing & Data Retrieval --------------- #
+def get_input_arguments():
+    return sys.argv[1:]
 
 # --------------- Resolution --------------- #
-def compute_division(dividend: int, divisor: int) -> tuple[int, int]:
-    """Compute quotient and remainder of an integer division."""
-    quotient = dividend // divisor
-    remainder = dividend % divisor
+def compute_division_result():
+    arguments = get_input_arguments()
+
+    if not is_valid_division_arguments(arguments):
+        return "Error."
+
+    numerator, denominator = map(int, arguments)
+    quotient = numerator // denominator
+    remainder = numerator % denominator
+
     return quotient, remainder
 
 # --------------- Result Display / Execution --------------- #
-def main():
-    result = validate_inputs(sys.argv[1:])
-    
-    if isinstance(result, str):  # Error case
-        print(result)
-        return
+def display_division_results():
 
-    dividend, divisor = result
-    quotient, remainder = compute_division(dividend, divisor)
+    results = compute_division_result()
 
-    print(f"résultat: {quotient}")
-    print(f"reste: {remainder}")
+    if isinstance(results, str):  # Error case
+            print(results)
+    else:
+        quotient, remainder = results
+        print(f"quotient: {quotient}")
+        print(f"remainder: {remainder}")
 
-if __name__ == "__main__":
-    main()
+display_division_results()

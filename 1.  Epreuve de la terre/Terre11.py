@@ -26,3 +26,13 @@ if est_premier(nombre):
     print(f"Oui, {nombre} est un nombre premier.")
 else:
     print(f"Non, {nombre} n’est pas un nombre premier.")
+
+# --------------- Utilities --------------- #
+
+# --------------- Error handling --------------- #
+
+# --------------- Parsing & Data Retrieval  --------------- #
+
+# --------------- Resolution --------------- #
+
+# --------------- Result Display / Execution --------------- #
