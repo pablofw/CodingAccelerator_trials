@@ -1,4 +1,4 @@
-# Taille d’une chaîne
+# String size
 # --------------- Utilities --------------- #
 import sys
 
