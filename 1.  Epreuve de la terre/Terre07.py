@@ -1,29 +1,35 @@
-# Inverser une chaîne
-
-import sys
-# Vérification des arguments
-if len(sys.argv) != 2:
-    print("Erreur : veuillez fournir une seule chaîne de caractère, et si elle comprend des espaces faut la donner entre guillemets.")
-    sys.exit(1)
-
-def inverser_chaine(chaine):
-    newchaine = ""  
-    for caractere in chaine:
-        newchaine = caractere + newchaine  # Ajoute chaque caractère au début
-    return newchaine
-
-# Récupération de l'argument et applic de la foncttion
-chaine_input = sys.argv[1]
-chaine_output = inverser_chaine(chaine_input)
-
-print(chaine_output)
-
+# Invert a character string
 # --------------- Utilities --------------- #
+import sys
+
+def reverse_string(text: str):
+    reversed_text = []  
+    for char in text:
+        reversed_text = char + reversed_text
+    reversed_chain = "".join(reversed_text)
+    return reversed_chain
 
 # --------------- Error handling --------------- #
+def is_valid_string_chain(arguments) -> bool:
+    return len(arguments) == 2 and isinstance(arguments[1], str) and arguments[1].strip() != ""
 
-# --------------- Parsing & Data Retrieval  --------------- #
+# --------------- Parsing & Data Retrieval --------------- #
+def get_arguments() -> str:
+    return sys.argv
 
 # --------------- Resolution --------------- #
+def process_reversing_text() -> str:
+    arguments = get_arguments()
+    if not is_valid_string_chain(arguments):
+        print("Error: Please provide a non-empty string as an argument.")
+        sys.exit(1)
+        
+    text = arguments[1]
+    return reverse_string(text)
 
 # --------------- Result Display / Execution --------------- #
+def display_reversed_string():
+    reversed_string = process_reversing_text()
+    print(reversed_string)
+
+display_reversed_string()
