@@ -1,32 +1,32 @@
 # Taille d’une chaîne
-
+# --------------- Utilities --------------- #
 import sys
 
-# Check nb argu
-if len(sys.argv) != 2:
-    print("Erreur : veuillez fournir une seule chaîne de caractère, et si elle comprend des espaces faut la donner entre guillemets.")
-    exit()
-# Check bon format
-argument = sys.argv[1]
-if argument.isdigit():
-    print("Erreur, donne une chaine de caractère.")
-    exit()
-
-# Fonction
-def nb_caracteres(chaine):
-    nb = 0
-    for _ in chaine:
-        nb += 1
-    return nb
-
-print(nb_caracteres(argument))
-
-# --------------- Utilities --------------- #
+def count_characters(input_string: str) -> int:
+    count = 0
+    for char in input_string:
+        count += 1
+    return count
 
 # --------------- Error handling --------------- #
-
+def is_valid_string_chain(arguments) -> bool:
+    return len(arguments) == 2 and isinstance(arguments[1], str) and arguments[1].strip() != ""
+    
 # --------------- Parsing & Data Retrieval  --------------- #
-
+def get_arguments():
+    return sys.argv
+    
 # --------------- Resolution --------------- #
+def process_count_characters():
+arguments = get_arguments()
+if not is_valid_string_chain(arguments):
+    print("Error")
+    sys.exit(1)
+return count_characters(arguments[1])
 
 # --------------- Result Display / Execution --------------- #
+def display_nb_characters():
+    result = process_count_characters()
+    print(result)
+    
+display_nb_characters()
