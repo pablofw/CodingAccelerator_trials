@@ -1,6 +1,6 @@
 # alphabet
 # --------------- Utilities --------------- #
-def generate_alphabet():
+def get_alphabet():
     ascii_a = ord("a")
     ascii_z = ord("z")
     alphabet = ""
@@ -12,7 +12,7 @@ def generate_alphabet():
 # --------------- Parsing & Data Retrieval  --------------- #
 # --------------- Resolution --------------- #
 def display_alphabet():
-    print(generate_alphabet())
+    print(get_alphabet())
 
 # --------------- Result Display / Execution --------------- #
 display_alphabet()
