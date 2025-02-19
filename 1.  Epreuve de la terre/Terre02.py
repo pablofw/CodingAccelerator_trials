@@ -1,7 +1,11 @@
 # Program name
 # --------------- Utilities --------------- #
-def get_filename():
-    import sys
+import sys
+
+def get_filename() -> str:
+    """
+    Extract the script's filename from the path manually
+    """
     full_path = sys.argv[0]
     filename = ""
     
@@ -15,23 +19,16 @@ def get_filename():
     
 # --------------- Error handling --------------- #
 def is_valid_filename(filename: str) -> bool:
-    return bool(filename) and filename.count(".") >= 1 and not filename.startswith(".")
+    return bool(filename)
 
 # --------------- Parsing & Data Retrieval--------------- #
     
 # --------------- Resolution --------------- #
-def retrieve_validated_filename(): 
+def retrieve_filename(): 
     filename = get_filename()   
-    return filename if is_valid_filename(filename) else None
+    if is_valid_filename(filename):
+        return filename
+    return "Error: no filename detected"
 
 # --------------- Result Display / Execution --------------- #
-def display_filename(): 
-    import sys
-    filename = retrieve_validated_filename()
-    if filename:
-        print(filename)
-    else: 
-        print("Error")
-        sys.exit(1)
-
-display_filename()
+print(retrieve_filename())
