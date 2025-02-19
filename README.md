@@ -14,10 +14,10 @@ Ce dépôt regroupe une série d'exercices conçus pour **renforcer ma maîtrise
  
 - **Privilégier la compréhension des concepts en approfondissant la logique** sous-jacente plutôt que de se reposer sur les raccourcis offerts par certaines fonctions natives.
   - Développer ma logique algorithmique, avec des exercices progressifs :
-    - 🌍 Terre – Bases du Python et fondamentaux du clean code.
-    - 💧 Eau – Approfondissement des bonnes pratiques et optimisation.
-    - 🌬 Air – Algorithmes avancés et complexité croissante.
-    - 🔥 Feu – Challenges experts et performance.
+    - 🌍 Épreuve de la Terre –
+    - 💧 Épreuve de l'Eau – 
+    - 🌬 Épreuve de l'Air – 
+    - 🔥 Épreuve du Feu – 
 
 ## 📌 Exécution des scripts  
 
@@ -30,7 +30,10 @@ python3 mon_exo.py
 
 Les exercices suivent une structure claire :  
 ```
-# Nom de l'exercice 
+# Nom de l'exercice
+"""
+Description de l'exercice
+"""
 # --------------- Utilities --------------- #  
 # --------------- Error handling --------------- #  
 # --------------- Parsing & Data Retrieval  --------------- #  
