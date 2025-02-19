@@ -15,7 +15,7 @@ def generate_alphabet() -> str:
 # --------------- Parsing & Data Retrieval  --------------- #
 # --------------- Resolution --------------- #
 def display_alphabet():
-    print(generate_alphabet())
+    print(generate_alphabet(), end="\n")
 
 # --------------- Result Display / Execution --------------- #
 display_alphabet()
