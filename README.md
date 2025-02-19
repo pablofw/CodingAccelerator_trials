@@ -11,6 +11,7 @@ Ce dépôt regroupe une série d'exercices conçus pour **renforcer ma maîtrise
   - **Single Responsibility Principle (SRP)** (chaque fonction fait une seule chose).  
   - **Don't Repeat Yourself (DRY)** (éviter la redondance).  
   - **Gestion propre des erreurs**
+ 
 - **Privilégier la compréhension des concepts en approfondissant la logique** sous-jacente plutôt que de se reposer sur les raccourcis offerts par certaines fonctions natives.
   - Développer ma logique algorithmique, avec des exercices progressifs :
     - 🌍 Terre – Bases du Python et fondamentaux du clean code.
