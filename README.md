@@ -14,8 +14,8 @@ Ce dépôt regroupe une série d'exercices conçus pour **renforcer ma maîtrise
  
 - **Privilégier la compréhension des concepts en approfondissant la logique** sous-jacente plutôt que de se reposer sur les raccourcis offerts par certaines fonctions natives.
   - Développer ma logique algorithmique, avec des exercices progressifs :
-    - 🌍 Épreuve de la Terre –
-    - 💧 Épreuve de l'Eau – 
+    - 🌍 Épreuve de la Terre – 16 exercices
+    - 💧 Épreuve de l'Eau – 16 exercices 
     - 🌬 Épreuve de l'Air – 
     - 🔥 Épreuve du Feu – 
 
