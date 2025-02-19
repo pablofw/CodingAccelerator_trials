@@ -31,9 +31,9 @@ python3 mon_exo.py
 Les exercices suivent une structure claire :  
 ```
 # Nom de l'exercice
-"""
+'''
 Description de l'exercice
-"""
+'''
 # --------------- Utilities --------------- #  
 # --------------- Error handling --------------- #  
 # --------------- Parsing & Data Retrieval  --------------- #  
