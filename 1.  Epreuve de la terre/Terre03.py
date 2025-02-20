@@ -1,29 +1,40 @@
 # Arguments display
+'''
+Goals:
+- Handling arguments passed to the script via the command line
+- Using coherent loops 
+- Applying clean code concepts
+'''
+
 # --------------- Utilities --------------- #
-def get_input_arguments():
-    import sys
+import sys
+
+def get_arguments():
+    """
+    Extract arguments from command line input, without path.
+    """
     return sys.argv[1:]
     
 # --------------- Error handling --------------- #
-def has_input_arguments(arguments):
-    return len(arguments) > 0 
+def has_arguments(arguments):
+    if not arguments:
+        print("Error: No arguments provided.")
+        return False
+    return True
 
 # --------------- Parsing & Data Retrieval --------------- #
 
 # --------------- Resolution --------------- #
-def get_validated_input_arguments():
-    import sys
-    sys_arguments = get_input_arguments()
-    if not has_input_arguments(sys_arguments):
-        print("Error: No arguments provided.")
-        sys.exit(1)
+def get_valid_arguments():
+    arguments = get_arguments()
+    if not has_arguments(arguments):
+        return None
     else: 
-        return sys_arguments
+        formatted_text = ""
+        for arg in arguments:
+            formatted_text += arg + "\n"
+        formatted_text = formatted_text.strip() 
+        return formatted_text
 
 # --------------- Result Display / Execution --------------- #
-def display_inputs_arguments():
-    arguments = get_validated_input_arguments()
-    for argument in arguments:
-        print(argument)
-
-display_inputs_arguments()
+print(get_valid_arguments())

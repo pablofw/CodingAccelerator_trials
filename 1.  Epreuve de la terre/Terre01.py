@@ -1,4 +1,11 @@
 # alphabet
+'''
+Goals :
+- Discovering ASCII range, chr() & ord()
+- Using coherent loops 
+- Applying clean code concepts
+'''
+
 # --------------- Utilities --------------- #
 def generate_alphabet() -> str:
     """

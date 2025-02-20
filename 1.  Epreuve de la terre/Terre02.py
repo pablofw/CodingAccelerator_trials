@@ -1,4 +1,11 @@
 # Program name
+'''
+Goals:
+- Discovering sys
+- Using coherent loops 
+- Applying clean code concepts
+'''
+
 # --------------- Utilities --------------- #
 import sys
 
@@ -19,7 +26,11 @@ def get_filename() -> str:
     
 # --------------- Error handling --------------- #
 def is_valid_filename(filename: str) -> bool:
-    return bool(filename)
+    if bool(filename):
+        return True
+    else:
+        print("Error: no filename detected")
+        return False
 
 # --------------- Parsing & Data Retrieval--------------- #
     
@@ -28,7 +39,7 @@ def retrieve_filename():
     filename = get_filename()   
     if is_valid_filename(filename):
         return filename
-    return "Error: no filename detected"
+    return None
 
 # --------------- Result Display / Execution --------------- #
 print(retrieve_filename())
