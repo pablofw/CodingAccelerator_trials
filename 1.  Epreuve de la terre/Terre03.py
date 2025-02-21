@@ -8,12 +8,6 @@ Goals:
 
 # --------------- Utilities --------------- #
 import sys
-
-def get_arguments():
-    """
-    Extract arguments from command line input, without path.
-    """
-    return sys.argv[1:]
     
 # --------------- Error handling --------------- #
 def has_arguments(arguments):
@@ -23,7 +17,12 @@ def has_arguments(arguments):
     return True
 
 # --------------- Parsing & Data Retrieval --------------- #
-
+def get_arguments():
+    """
+    Extract arguments from command line input, without path.
+    """
+    return sys.argv[1:]
+    
 # --------------- Resolution --------------- #
 def get_valid_arguments():
     arguments = get_arguments()
