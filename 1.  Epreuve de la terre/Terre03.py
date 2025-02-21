@@ -1,9 +1,10 @@
 # Arguments display
 '''
 Goals:
+- Applying clean code concepts (STP, DRY, lisibility...)
+- Training algorithmic skills
 - Handling arguments passed to the script via the command line
 - Using coherent loops 
-- Applying clean code concepts
 '''
 
 # --------------- Utilities --------------- #
