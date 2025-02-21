@@ -1,9 +1,10 @@
 # Program name
 '''
 Goals:
+- Applying clean code concepts (STP, DRY, lisibility...)
+- Training algorithmic skills
 - Discovering sys
 - Using coherent loops 
-- Applying clean code concepts
 '''
 
 # --------------- Utilities --------------- #
