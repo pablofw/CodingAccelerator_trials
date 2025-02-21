@@ -1,9 +1,10 @@
 # alphabet
 '''
 Goals :
+- Applying clean code concepts (STP, DRY, lisibility...)
+- Training algorithmic skills
 - Discovering ASCII range, chr() & ord()
 - Using coherent loops 
-- Applying clean code concepts
 '''
 
 # --------------- Utilities --------------- #
