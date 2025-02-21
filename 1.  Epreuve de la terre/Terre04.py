@@ -1,10 +1,11 @@
 # The alphabet from _
 '''
 Goals:
+- Training algorithmic skills
+- Applying clean code concepts (STP, DRY, lisibility...)
 - String manipulation
 - Using coherent loops 
 - Discovering index
-- Applying clean code concepts
 '''
 
 # --------------- Utilities --------------- #
