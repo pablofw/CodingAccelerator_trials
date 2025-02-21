@@ -45,7 +45,7 @@ def get_alphabet_from_letter(start_letter: str) -> str:
 def is_valid_lowercase_letter_argument(arguments: list) -> bool:
     if len(arguments) != 1:
         print("Error: Please provide only one entry.")
-        return None
+        return False
     start_letter = arguments[0]
     is_single_character = len(start_letter) == 1  
     is_lowercase_letter = 'a' <= start_letter <= 'z'  
@@ -56,12 +56,14 @@ def is_valid_lowercase_letter_argument(arguments: list) -> bool:
         return False 
 
 # --------------- Parsing & Data Retrieval --------------- #
-
+def get_start_letter():
+    
 # --------------- Resolution --------------- #
 def process_alphabet_generator_from_letter():
-    start_letter = get_arguments()
+    arguments = get_arguments()
     if not start_letter or not is_valid_lowercase_letter_argument(start_letter):
         return None
+    start_letter = arguments[0]
     alphabet_extract = get_alphabet_from_letter(start_letter)
     return alphabet_extract
 
